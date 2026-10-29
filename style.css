@@ -1,0 +1,241 @@
+
+/* 1. Basic settings */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #0f172a;
+    color: #f8fafc;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 2. Navigation bar using Flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 1px solid #263247;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #f97316;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 24px;
+}
+
+.navbar nav a {
+    color: #cbd5e1;
+}
+
+.navbar nav a:hover {
+    color: #f97316;
+}
+
+/* 3. Hero section */
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 100px 24px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #fb923c;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 6vw, 64px);
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero-text {
+    max-width: 620px;
+    margin: 0 auto 30px;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+/* 4. Buttons */
+.button {
+    display: inline-block;
+    background: #05f201;
+    color: #ffffff;
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.button:hover {
+    background: #ea580c;
+}
+
+/* 5. Services using CSS Grid */
+.services {
+    padding: 60px 8%;
+    background: #172033;
+    text-align: center;
+}
+
+.services h2,
+.contact h2 {
+    font-size: 34px;
+}
+
+.section-intro {
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.service-card {
+    padding: 28px;
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 12px;
+}
+
+.service-card h3 {
+    color: #fb923c;
+}
+
+.service-card p {
+    color: #cbd5e1;
+}
+
+/* 6. Contact section */
+.contact {
+    padding: 70px 24px;
+    text-align: center;
+}
+
+.contact p {
+    color: #cbd5e1;
+    margin-bottom: 28px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #94a3b8;
+    border-top: 1px solid #263247;
+    font-size: 14px;
+}
+
+/* 7. Responsive design for phones and tablets */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 70px 20px;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services h2,
+    .contact h2 {
+        font-size: 28px;
+    }
+}
+
+/* Hide the menu button on larger screens */
+.menu-toggle {
+    display: none;
+}
+
+/* Mobile navigation */
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+        background: #f97316;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        padding: 10px 16px;
+        cursor: pointer;
+    }
+
+    .navbar nav {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+}
+
+#contactForm {
+    max-width: 440px;
+    margin: 30px auto 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contactForm input {
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: #1e293b;
+    color: white;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+#contactForm input:focus {
+    outline: 2px solid #f97316;
+}
+
+#formMessage {
+    overflow-wrap: anywhere;
+}
+
