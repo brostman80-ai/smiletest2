@@ -10,7 +10,7 @@ html {
 
 body {
     margin: 0;
-    background: #0f172a;
+    background: #210f2a;
     color: #f8fafc;
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -83,7 +83,7 @@ a {
 /* 4. Buttons */
 .button {
     display: inline-block;
-    background: #05f201;
+    background: #09f201;
     color: #ffffff;
     padding: 13px 24px;
     border-radius: 8px;
@@ -237,5 +237,36 @@ footer {
 
 #formMessage {
     overflow-wrap: anywhere;
+}
+
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #475569;
+    border-radius: 6px;
+    background: #1e293b;
+    color: white;
+    font: inherit;
+    margin-bottom: 12px;
+}
+
+#contactForm textarea {
+    resize: vertical;
+}
+
+#contactForm input,
+#contactForm select,
+#contactForm textarea {
+    width: 100%;
+}
+
+#contactForm button {
+    align-self: flex-start;
+}
+
+#contactForm label {
+    color: #f8fafc;
+    font-weight: bold;
 }
 

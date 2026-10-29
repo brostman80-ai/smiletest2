@@ -39,30 +39,58 @@
 <p id="message"></p>
         </section>
 
-        <section class="services" id="services">
-            <h2>What We Do</h2>
+       
+<section class="contact" id="contact">
+    <h2>Let's Work Together</h2>
+    <p>Tell us about your website project.</p>
 
-            <p class="section-intro">
-                Everything you need to get your business online.
-            </p>
+    <form
+        id="contactForm"
+        action="https://formspree.io/f/mnppzaly"
+        method="POST"
+    >
+        <label for="customerName">Your name</label>
+        <input
+            type="text"
+            id="customerName"
+            name="name"
+            autocomplete="name"
+            required
+        >
 
-            <div class="service-grid">
-                <article class="service-card">
-                    <h3>Website Design</h3>
-                    <p>Modern websites that look great on every device.</p>
-                </article>
+        <label for="customerEmail">Your email</label>
+        <input
+            type="email"
+            id="customerEmail"
+            name="email"
+            autocomplete="email"
+            required
+        >
 
-                <article class="service-card">
-                    <h3>Business Websites</h3>
-                    <p>Help customers discover your business and services.</p>
-                </article>
+        <label for="projectType">What do you need?</label>
+        <select id="projectType" name="project_type" required>
+            <option value="">Choose a service</option>
+            <option value="Business website">Business website</option>
+            <option value="Portfolio website">Portfolio website</option>
+            <option value="Website redesign">Website redesign</option>
+            <option value="Website maintenance">Website maintenance</option>
+            <option value="Other">Other</option>
+        </select>
 
-                <article class="service-card">
-                    <h3>Website Support</h3>
-                    <p>Keep your website updated as your business grows.</p>
-                </article>
-            </div>
-        </section>
+        <label for="customerMessage">Tell us about your project</label>
+        <textarea
+            id="customerMessage"
+            name="message"
+            rows="5"
+            required
+        ></textarea>
+
+        <button type="submit" class="button">
+            Send Enquiry
+        </button>
+    </form>
+</section>
+
 
         <section class="contact" id="contact"><a
   href="https://wa.me/26775153852?text=Hello%20I%20would%20like%20a%20website"

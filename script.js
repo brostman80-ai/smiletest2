@@ -25,13 +25,7 @@ if (menuToggle && siteNav) {
     });
 }
 
-/* 3. Contact form */
-const contactForm = document.querySelector("#contactForm");
-const formMessage = document.querySelector("#formMessage");
 
-if (contactForm && formMessage) {
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
 
         const customerName =
             document.querySelector("#customerName").value.trim();
